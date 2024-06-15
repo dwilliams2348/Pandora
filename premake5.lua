@@ -10,6 +10,12 @@ workspace "Pandora"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+--Include directories relative to root
+IncludeDir = {}
+IncludeDir["GLFW"] = "Pandora/vendor/GLFW/include"
+
+--include "Pandora/vendor/GLFW"
+
 project "Pandora"
     location "Pandora"
     kind "StaticLib"
@@ -17,6 +23,9 @@ project "Pandora"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+    pchheader "PEpch.h"
+    pchsource "Pandora/src/PEpch.cpp"
 
     files
     {
@@ -26,7 +35,15 @@ project "Pandora"
 
     includedirs
     {
-        "Pandora/src"
+        "Pandora/src",
+        "%{IncludeDir.GLFW}",
+        "$(VULKAN_SDK)/Include"
+    }
+
+    links
+    {
+        "Pandora/vendor/GLFW/lib-vc2022/glfw3_mt.lib",
+        "$(VULKAN_SDK)/lib/vulkan-1.lib"
     }
 
     filter "system:windows"

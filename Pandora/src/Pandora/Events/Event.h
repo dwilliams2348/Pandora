@@ -1,10 +1,7 @@
 #pragma once
 
+#include "PEpch.h"
 #include "Pandora/Core.h"
-
-#include <string>
-#include <functional>
-#include <iostream>
 
 namespace Pandora {
 	/*

@@ -10,8 +10,15 @@
     <Filter Include="Pandora\Logger">
       <UniqueIdentifier>{D98180C4-C54F-74CA-AEE3-E4F09A50502F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pandora\Platform">
+      <UniqueIdentifier>{DED2ADA3-CACB-CCF5-F3FD-B17ADF55AC01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pandora\Platform\Windows">
+      <UniqueIdentifier>{187B579F-04A0-A61F-2DEB-8BAF196FA53D}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\PEpch.h" />
     <ClInclude Include="src\Pandora.h" />
     <ClInclude Include="src\Pandora\Application.h">
       <Filter>Pandora</Filter>
@@ -40,13 +47,23 @@
     <ClInclude Include="src\Pandora\Logger\Logger.h">
       <Filter>Pandora\Logger</Filter>
     </ClInclude>
+    <ClInclude Include="src\Pandora\Platform\Windows\WindowsWindow.h">
+      <Filter>Pandora\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pandora\Window.h">
+      <Filter>Pandora</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\PEpch.cpp" />
     <ClCompile Include="src\Pandora\Application.cpp">
       <Filter>Pandora</Filter>
     </ClCompile>
     <ClCompile Include="src\Pandora\Log.cpp">
       <Filter>Pandora</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pandora\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Pandora\Platform\Windows</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
