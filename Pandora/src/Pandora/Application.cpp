@@ -1,5 +1,8 @@
 #include "Application.h"
 
+#include "Pandora/Events/ApplicationEvent.h"
+#include "Pandora/Log.h"
+
 namespace Pandora {
 	Application::Application() {
 
@@ -10,8 +13,9 @@ namespace Pandora {
 	}
 
 	void Application::Run() {
-		while (true){
+		WindowResizeEvent e(1280, 720);
+		LogEngineTrace(e.ToString().c_str());
 
-		}
+		while (true);
 	}
 }
