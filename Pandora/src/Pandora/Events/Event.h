@@ -47,6 +47,8 @@ namespace Pandora {
 		friend class EventDispatcher;
 
 	public:
+		bool Handled = false;
+
 		virtual EEventType GetEventType() const = 0;
 		virtual const char* GetName() const = 0;
 		virtual int GetCategoryFlags() const = 0;
@@ -56,8 +58,6 @@ namespace Pandora {
 			return GetCategoryFlags() & category;
 		}
 
-	protected:
-		bool mHandled = false;
 	};
 
 	class EventDispatcher {
@@ -71,7 +71,7 @@ namespace Pandora {
 		template<typename T>
 		bool Dispatch(EventFn<T> func) {
 			if (mEvent.GetEventType() == T::GetStaticType()) {
-				mEvent.mHandled = func(*(T*)&mEvent);
+				mEvent.Handled = func(*(T*)&mEvent);
 				return true;
 			}
 

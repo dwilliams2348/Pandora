@@ -64,14 +64,17 @@ project "Pandora"
 
     filter "configurations:Debug"
 		defines "PE_DEBUG"
+        buildoptions "/MTd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "PE_RELEASE"
+        buildoptions "/MT"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "PE_DIST"
+        buildoptions "/MT"
 		optimize "On"
 
     
@@ -112,12 +115,15 @@ project "Sandbox"
 
     filter "configurations:Debug"
 		defines "PE_DEBUG"
+        buildoptions "/MTd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "PE_RELEASE"
+        buildoptions "/MT"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "PE_DIST"
+        buildoptions "/MT"
 		optimize "On"

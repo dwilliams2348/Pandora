@@ -41,6 +41,12 @@
     <ClInclude Include="src\Pandora\Events\MouseEvent.h">
       <Filter>Pandora\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Pandora\Layer.h">
+      <Filter>Pandora</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pandora\LayerStack.h">
+      <Filter>Pandora</Filter>
+    </ClInclude>
     <ClInclude Include="src\Pandora\Log.h">
       <Filter>Pandora</Filter>
     </ClInclude>
@@ -57,6 +63,12 @@
   <ItemGroup>
     <ClCompile Include="src\PEpch.cpp" />
     <ClCompile Include="src\Pandora\Application.cpp">
+      <Filter>Pandora</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pandora\Layer.cpp">
+      <Filter>Pandora</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pandora\LayerStack.cpp">
       <Filter>Pandora</Filter>
     </ClCompile>
     <ClCompile Include="src\Pandora\Log.cpp">

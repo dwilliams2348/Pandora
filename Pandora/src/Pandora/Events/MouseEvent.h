@@ -91,5 +91,7 @@ namespace Pandora {
 			ss << "MouseButtonReleasedEvent: " << mButton;
 			return ss.str();
 		}
+
+		EVENT_CLASS_TYPE(MouseButtonReleased)
 	};
 }
